@@ -186,6 +186,7 @@ void SpinAdapted::Input::initialize_defaults()
 
   m_orbformat=MOLPROFORM;
 
+  m_stochasticpt_restart = false;
   m_warmup = LOCAL0;
 }
 
@@ -929,6 +930,10 @@ If 2 spins are given, the calculations of transition density matrix between wave
       }
 
 
+      else if (boost::iequals(keyword,  "sto_pt_restart") )
+      {
+        m_stochasticpt_restart = true;
+      }
       else if (boost::iequals(keyword,  "docd") || boost::iequals(keyword,  "do_npdm_ops"))
       {
         m_do_npdm_ops = true;

@@ -204,6 +204,7 @@ class Input {
   bool m_conventional_nevpt2;
   int m_kept_nevpt2_states;
   pair<bool,int> NevPrint;
+  bool m_stochasticpt_restart;
 
   friend class boost::serialization::access;
   template<class Archive>
@@ -572,6 +573,7 @@ class Input {
   const bool &npdm_intermediate() const { return m_npdm_intermediate; }
   bool &npdm_multinode() { return m_npdm_multinode; }
   const bool &npdm_multinode() const { return m_npdm_multinode; }
+  const bool &stochasticpt_restart() const { return m_stochasticpt_restart; }
 };
 }
 #endif
